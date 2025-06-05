@@ -1,0 +1,18 @@
+@use '../../variables.scss';
+
+.header-container {
+    background-color: variables.$gray-800;
+    display: flex;
+    padding: 15px;
+    width: 100%;
+    .head-section {
+        display: flex;
+        height: 100%;
+        align-items: center;
+    }
+    .header-left-section {
+        color: variables.$gray-300;
+        font-size: 25px;
+        font-weight: 600;
+    }
+}

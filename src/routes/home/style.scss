@@ -1,0 +1,18 @@
+@use "src/variables.scss";
+
+.home {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    color: variables.$gray-300;
+    .left-container {
+        width: 70%;
+        padding: 15px;
+        background-color: variables.$gray-600;
+    }
+    .right-container {
+        width: 30%;
+        padding: 15px;
+        background-color: variables.$gray-700;
+    }
+}
