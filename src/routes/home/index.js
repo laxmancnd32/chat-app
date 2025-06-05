@@ -7,7 +7,23 @@ import "./style.scss";
 const Home = () => {
   const [chatOverlayProperties, setChatOverlayProperties] = useState({
     display: false,
+    userDetails: {},
   });
+  const [chatHistory, setChatHistory] = useState({});
+
+  const updateChatHistory = (message, userDetails) => {
+    setChatHistory((prevHistory) => ({
+      ...prevHistory,
+      [userDetails.id]: [
+        ...(prevHistory[userDetails.id] || []),
+        {
+          message,
+          time: new Date().toLocaleTimeString(),
+          sentBy: "loggedInUser",
+        },
+      ],
+    }));
+  };
 
   return (
     <div className="home">
@@ -31,11 +47,14 @@ const Home = () => {
         position="abs"
         displayCloseSidebar={true}
         noShadow
-        content={<ChatContainer />}
+        content={
+          <ChatContainer
+            userDetails={chatOverlayProperties?.userDetails}
+            updateChatHistory={updateChatHistory}
+            chatHistory={chatHistory}
+          />
+        }
       />
-      {/* <div className="right-container">
-        <ChatContainer />
-      </div> */}
     </div>
   );
 };
