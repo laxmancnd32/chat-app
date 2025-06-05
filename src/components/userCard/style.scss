@@ -1,5 +1,7 @@
+@use "src/variables.scss";
+ 
 .user-card {
-    background-color: #424242;
+    background-color: variables.$gray-700;
     border: 1px solid #171717;
     border-radius: 4px;
     padding: 10px;
@@ -8,6 +10,9 @@
     justify-content: space-between;
     width: 100%;
     height: 100%;
+    &.card-active {
+        background-color: variables.$gray-800;
+    }
     .user-card-details {
         display: flex;
         flex-direction: column;

@@ -10,6 +10,11 @@ const Home = () => {
     userDetails: {},
   });
   const [chatHistory, setChatHistory] = useState({});
+  const selectedUserId = chatOverlayProperties?.userDetails?.id;
+
+  const handleChatClick = (userDetails) => {
+    setChatOverlayProperties({ display: true, userDetails });
+  }
 
   const updateChatHistory = (message, userDetails) => {
     setChatHistory((prevHistory) => ({
@@ -34,9 +39,8 @@ const Home = () => {
         }
       >
         <UsersContainer
-          onChatClick={(userDetails) =>
-            setChatOverlayProperties({ display: true, userDetails })
-          }
+          onChatClick={handleChatClick}
+          selectedUserId={selectedUserId}
         />
       </div>
       <SideBarOverlay

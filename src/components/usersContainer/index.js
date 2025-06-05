@@ -11,7 +11,7 @@ const UsersContainer = (props) => {
       </div>
       <div className="users-container-list">
         {USERS.map((user) => (
-          <UserCard key={user.id} userDetails={user} {...props} />
+          <UserCard key={user.id} userDetails={user} {...props} isSelected={user?.id === props?.selectedUserId} />
         ))}
       </div>
     </div>
