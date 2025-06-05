@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import UserAvatar from "../userAvatar";
 import Button from "../button";
+import MessageCard from "../messageCard";
 
 import "./style.scss";
 
@@ -40,10 +41,11 @@ const ChatContainer = (props) => {
       </div>
       <div className="chat-container-messages">
         {chatHistoryForUser.map((msg, index) => (
-          <div key={index} className="message-card">
-            <div className="message-content">{msg?.message}</div>
-            <div className="message-time">{msg?.time}</div>
-          </div>
+          <MessageCard
+            key={index}
+            message={msg}
+            position={msg?.sentBy === "loggedInUser" ? "right" : "left"}
+          />
         ))}
       </div>
       <div className="chat-container-input">
