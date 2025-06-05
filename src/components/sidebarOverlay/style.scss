@@ -1,4 +1,6 @@
 
+@use "src/variables.scss";
+
 .sidebar-overlay-container {
     z-index: 1;
     height: 100%;
@@ -8,7 +10,7 @@
         flex-direction: column;
     }
 
-    background-color: #424242;
+    background-color: variables.$gray-700;
     transition: all 0.3s ease-in-out;
 
     &.left-aligned {

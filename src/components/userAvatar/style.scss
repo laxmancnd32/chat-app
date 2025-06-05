@@ -1,10 +1,12 @@
+@use "src/variables.scss";
+
 .user-avatar {
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #e0e0e0;
-  color: #666;
+  background-color: variables.$gray-300;
+  color: variables.$gray-600;
   font-weight: bold;
   font-size: 60%;
 }

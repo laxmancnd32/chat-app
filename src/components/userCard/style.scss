@@ -2,7 +2,7 @@
  
 .user-card {
     background-color: variables.$gray-700;
-    border: 1px solid #171717;
+    border: 1px solid variables.$gray-900;
     border-radius: 4px;
     padding: 10px;
     display: flex;
@@ -26,12 +26,12 @@
     }
     button {
         padding: 6px;
-        color: #212121;
+        color: variables.$gray-800;
         cursor: pointer;
         width: 75px;
         &:hover {
-            background-color: #cdcdcd;
-            color: #424242;
+            background-color: variables.$gray-300;
+            color: variables.$gray-700;
         }
     }
 }
