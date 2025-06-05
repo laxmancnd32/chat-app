@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { IoMdCloseCircle } from "react-icons/io";
 
 import "./style.scss";
@@ -15,15 +14,6 @@ const SideBarOverlay = (props) => {
     displayCloseSidebar = false,
     onClose = () => {},
   } = props;
-
-  // This is to prevent the body from scrolling when the sidebar is open
-  useEffect(() => {
-    document.body.style.overflow = isOpen ? "hidden" : "scroll";
-
-    return () => {
-      document.body.style.overflow = "auto"; // Cleanup on unmount
-    };
-  }, [isOpen]);
 
   const getSidebarClassName = () => {
     let defaultClass = "sidebar-overlay-container";

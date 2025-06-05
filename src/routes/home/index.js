@@ -44,7 +44,7 @@ const Home = () => {
         isOpen={chatOverlayProperties?.display}
         alignment="right"
         style={{ backgroundColor: "", width: `${400}px` }}
-        position="abs"
+        position="fixed"
         displayCloseSidebar={true}
         noShadow
         content={
