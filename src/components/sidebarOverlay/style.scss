@@ -1,0 +1,56 @@
+
+.sidebar-overlay-container {
+    z-index: 1;
+    height: 100%;
+    .overlay-content {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    background-color: #424242;
+    transition: all 0.3s ease-in-out;
+
+    &.left-aligned {
+        left: 0;
+        transform: translateX(-100%); // By default keep the sideBar hidden by transforming x to -100%
+        &.open-sidebar {
+            transform: translateX(0); // Open the sideBar by transforming x to 0
+        }
+    }
+    &.right-aligned {
+        right: 0;
+        transform: translateX(100%); // By default keep the sideBar hidden by transforming x to 100%
+        &.open-sidebar {
+            transform: translateX(0); // Open the sideBar by transforming x to 0
+        }
+    }
+
+
+    &.abs {
+        position: absolute;
+    }
+
+    &.fixed {
+        position: fixed;
+    }
+
+    &.right-aligned {
+        box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.05);
+    }
+
+    &.left-aligned {
+        box-shadow: 7px 0px 14px rgba(0, 0, 0, 0.09);
+    }
+
+    .close {
+        height: 100%;
+    }
+    .overlay-close {
+        position: absolute;
+        right: 15px;
+        cursor: pointer;
+        margin-top: 5px;
+        padding: 15px 0;
+    }
+}

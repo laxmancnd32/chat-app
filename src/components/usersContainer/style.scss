@@ -3,4 +3,10 @@
     font-size: 20px;
     font-weight: 600;
   }
+  .users-container-list {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
 }
