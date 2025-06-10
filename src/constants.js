@@ -11,7 +11,7 @@ export const USERS = [
   },
   {
     id: 3,
-    name: "John Smith",
-    email: "john.smith@example.com",
+    name: "Maria Smith",
+    email: "maria.smith@example.com",
   },
 ];
